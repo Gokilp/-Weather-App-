@@ -14,7 +14,7 @@ body {
   max-width: 470px;
   background: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 94%, #1c1a27 100%);
   border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0git , 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   margin: 70px auto;
   padding: 40px 35px;
   text-align: center;
@@ -103,3 +103,4 @@ body {
   margin-top: -6px;
   color:#ebfffc
 }
+
