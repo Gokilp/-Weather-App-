@@ -14,19 +14,28 @@ async function gerateWeather(city) {
   document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
   document.querySelector(".humidity").innerHTML = data.main.humidity;
   document.querySelector(".wind").innerHTML = data.wind.speed;
-  if(data.weather[0].icon == "Clouds") 
-    {
-      weathericon.src = "images/cloud.png";
-    } else if(data.weather[0].icon == "Clear") {
+
+  const weatherType = data.weather[0].main.toLowerCase();
+  switch (weatherType) {
+    case "clouds":
+      weathericon.src = "images/clouds.png";
+      break;
+    case "clear":
       weathericon.src = "images/clear.png";
-  } else if (data.weather[0].icon == "Rain") {
-    weathericon.src = "images/rain.png";
-     }else if(data.weather[0].icon == "Drizzle") {
+      break;
+    case "rain":
+      weathericon.src = "images/rain.png";
+      break;
+    case "drizzle":
       weathericon.src = "images/drizzle.png";
+      break;
+    case "mist":
+      weathericon.src = "images/mist.png";
+      break;
+    default:
+      weathericon.src = "images/Notfound-.png"; // Set a default image or leave it blank if the weather condition is not recognized
+      break;
   }
-  else if (data.weather[0].icon == "Mist") {
-    weathericon.src = "images/mist.png";
-}
 }
 
 const handleCitySearch = () => {
